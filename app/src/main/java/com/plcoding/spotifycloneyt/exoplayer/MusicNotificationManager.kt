@@ -25,7 +25,7 @@ class MusicNotificationManager(
     private val notificationManager: PlayerNotificationManager
 
     init {
-        val mediaController =MediaControllerCompat(context,sessionToken)
+        val mediaController = MediaControllerCompat(context, sessionToken)
         notificationManager = PlayerNotificationManager.createWithNotificationChannel(
             context,
             NOTIFICATION_CHANNEL_ID,
@@ -40,7 +40,7 @@ class MusicNotificationManager(
         }
     }
 
-    fun showNotification(player: Player){
+    fun showNotification(player: Player) {
         notificationManager.setPlayer(player)
     }
 
